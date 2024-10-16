@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Canela text';
+    src: url('Cenela text.otf');
+}
+
+body {
+    margin: 0;
+    font-family: 'Canela text';
+    background-color: transparent;
+    overflow: hidden; /* Impede rolagem */
+}
+
+.video-background {
+    position: fixed; /* Fixa o vídeo ao fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o vídeo atrás do overlay */
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%; /* Posiciona no meio da tela */
+    left: 50%; /* Posiciona no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0); /* Fundo escuro para legibilidade */
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    z-index: 1; /* Coloca o overlay na frente do vídeo */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+p {
+    font-size: 80px; /* Tamanho maior para a contagem de likes */
+    margin: -15px 0 0;
+}
+
+.progress-container {
+    position: absolute; /* Coloca a barra de progresso na posição fixa */
+    top: 59%; /* Alinha a barra abaixo da contagem de likes */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza completamente */
+    width: 909px; /* Largura fixa da barra de progresso */
+    background-color: #333; /* Cor de fundo da barra */
+    border-radius: 5px; /* Bordas arredondadas */
+    height: 20px; /* Altura da barra de progresso */
+    z-index: -2; /* Coloca a barra atrás do vídeo */
+}
+
+.progress-bar {
+    width: 0%; /* Inicia com 0% */
+    height: 100%; /* Altura total do contêiner */
+    background-color: #e2c890; /* Cor da barra de progresso */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: width 0.4s ease; /* Transição suave */
+}
+
+/* Estilos para o botão de verificar live */
+#check-live-btn {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e2c890;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2; /* Para ficar acima da barra de progresso */
+}
+
+#check-live-btn:hover {
+    background-color: #d1b57d;
+}

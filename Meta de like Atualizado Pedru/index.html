@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Goal Overlay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="Meta de Likes.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="overlay">
+        <p><span id="like-count">0</span> / <span id="like-goal-text">500</span></p>
+    </div>
+
+    <!-- Botão para verificar se o canal está ao vivo -->
+    <button id="check-live-btn" onclick="checkLiveStatus()">Verificar se está ao vivo</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
